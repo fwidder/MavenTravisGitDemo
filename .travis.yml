@@ -1,7 +1,7 @@
 # Project Language
 language: java
 # comment if  dont need su rights
-# sudo: required
+sudo: required
 jdk: oraclejdk10
 # Enviroment Variables
 # env:

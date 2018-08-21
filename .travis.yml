@@ -11,8 +11,8 @@ before_script:
   # Make Maven Wrapper executable
   - sudo chmod +x mvnw
   # Download Java Maven Dependencies
-  - "./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
+  - "sudo ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
 # Buildskripts
 script:
   # Execute JUnit tests
-  - ./mvnw test
+  - sudo ./mvnw test

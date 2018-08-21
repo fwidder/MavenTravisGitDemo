@@ -9,7 +9,7 @@ jdk: oraclejdk10
 # To do before building
 before_script:
   # Make Maven Wrapper executable
-  - sudo chmod +x mvnw
+  - "sudo chmod +x mvnw"
   # Download Java Maven Dependencies
   - "sudo ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
 # Buildskripts

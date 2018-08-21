@@ -10,9 +10,9 @@ jdk: oraclejdk10
 before_script:
   # Make Maven Wrapper executable
   - "sudo chmod +x mvnw"
-  # Download Java Maven Dependencies
-  - "sudo ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
 # Buildskripts
 script:
+  # Download Java Maven Dependencies
+  - "sudo ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
   # Execute JUnit tests
   - sudo ./mvnw test

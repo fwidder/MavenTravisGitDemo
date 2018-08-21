@@ -1,0 +1,18 @@
+# Project Language
+language: java
+# comment if  dont need su rights
+# sudo: required
+jdk: oraclejdk10
+# Enviroment Variables
+# env:
+#   - TYPE=BACKEND
+# To do before building
+before_script:
+  # Make Maven Wrapper executable
+  - sudo chmod +x mvnw
+  # Download Java Maven Dependencies
+  - "./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
+# Buildskripts
+script:
+  # Execute JUnit tests
+  - ./mvnw test
